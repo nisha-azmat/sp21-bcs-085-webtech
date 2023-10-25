@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Merriweather', serif;
+    
 }
 .all-content{
   background: #f7f5f2;
@@ -11,13 +12,8 @@ html::-webkit-scrollbar-track{
   background: transparent;
 }
 
-html::-webkit-scrollbar-thumb{
-  background: #b2744c;
-  border-radius: 10px;
-}
-html::-webkit-scrollbar{
-  width: 10px;
-}
+
+
 /* navbar */
 #navbar{
   background-color: #b2744c;
@@ -66,9 +62,13 @@ html::-webkit-scrollbar{
 .searchBox:hover > .searchInput {
     width: 240px;
     color : #f1985c;
+    
 
 
     
+}
+.searchBox:hover{
+
 }
 
 
@@ -115,4 +115,96 @@ html::-webkit-scrollbar{
     
 
 }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 100%;
+  max-width: 100%;
+}
+
+.column img {
+  vertical-align: middle;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  margin-top: 20px;
+  display:inline-block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color:#b2744c;
+}
+
+.container:hover .overlay {
+  opacity: 0.5;
+}
+
+.text {
+  color:#f0ebe8;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 481px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+}
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+    .column {
+      flex: 33.3%;
+      max-width: 33.3%;
+    }
+}
+#footer{
+  width: 100%;
+  background: #b2744c;
+  margin-top: 50px;
+}
+.footer-logo img{
+  width: 180px;
+  border-radius: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+#footer .socail-links i{
+  font-size: 17px;
+  margin-left: 10px;
+  margin-top: 30px;
+  padding: 10px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
 }
