@@ -40,7 +40,9 @@
   }
   
   /* Darker background on mouse-over */
- 
+ .background-image{
+  width: fit-content;
+ }
   
   .btn:hover {
     background-color: rgb(68, 180, 90);
@@ -48,8 +50,7 @@
   .navbar {
     overflow: hidden;
     background-color: #333;
-    background-image:url('images/header.png');
-    height: 150px;
+   
   }
   
   .navbar a {
