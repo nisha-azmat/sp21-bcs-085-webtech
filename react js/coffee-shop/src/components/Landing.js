@@ -1,7 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React from 'react';
+
+
 import './App.css';
+import { Link } from 'react-router-dom';
 
 function Landing() {
   return (
@@ -27,26 +30,24 @@ function Landing() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
-                  Home
-                </a>
-
-                
+              <Link className="nav-link" to="/Landing.js">
+              Home
+            </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#menu">
-                  Menu
-                </a>
+              <Link className="nav-link" to="/Menu">
+              Menu
+            </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#product">
-                  Product
-                </a>
+              <Link className="nav-link" to="/Products">
+              Product
+            </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">
+                <Link className="nav-link" to="/Account">
                   Account
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="searchBox">
