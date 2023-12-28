@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv'
 import user from './routes/user.js'
+import product from './routes/product.js'
 
 const app = express();
 app.use(express.json({ limit: '10mb' }));
@@ -22,6 +23,7 @@ app.get('/api', (req, res) => {
   res.send('Welcome to Backend')
 })
 app.use('/api', user)
+app.use('/api/product', product)
 
 
 

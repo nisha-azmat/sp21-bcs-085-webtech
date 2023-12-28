@@ -24,6 +24,10 @@ body {
     background-position: 80%;
     font-family: 'Roboto', sans-serif;
   }
+  /* styles.css */
+
+
+
   
   .content {
     padding-top: 210px;
@@ -57,6 +61,9 @@ body {
   #navbar {
     background-color: #b2744c;
     font-family: 'Roboto', sans-serif;
+    position: sticky;
+    z-index: 1000; 
+    
   }
   
   #logo img {

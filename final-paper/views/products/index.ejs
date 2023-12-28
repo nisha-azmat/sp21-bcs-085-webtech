@@ -1,0 +1,41 @@
+<!-- products/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Add your styles or link to external stylesheets here -->
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+
+<h1><%= title %></h1>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Actions</th>
+  </tr>
+  <% products.forEach(product => { %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.description %></td>
+      <td><%= product.price %></td>
+      <td>
+        <a href="/products/edit/<%= product._id %>">Update</a>
+        <form method="post" action="/products/delete/<%= product._id %>" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+  <% }); %>
+</table>
+
+<a href="/products/new">Add New Product</a>
+
+</body>
+</html>

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
 import { Link, useNavigate } from 'react-router-dom';
+import './App.css';
 import { url } from '../url';
 
 const Navbarr = () => {
@@ -37,7 +38,8 @@ const Navbarr = () => {
     setUser(null)
   }
   return (
-    <nav className="navbar navbar-expand-lg" id="navbar">
+    <nav className="navbar navbar-expand-lg fixed-top" id="navbar">
+    
         <div className="container-fluid">
           <Link className="navbar-brand" href="/to" id="logo">
             <img src="./images/logo.png" alt="Coffee Shop Logo" />
@@ -68,7 +70,7 @@ const Navbarr = () => {
             </Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link" to="/Products">
+              <Link className="nav-link" to="/Product">
               Product
             </Link>
               </li>
@@ -77,6 +79,11 @@ const Navbarr = () => {
                   <li className="nav-item">
                   <Link className="nav-link" to="/account">
                   Account
+                  </Link>
+                  </li>
+                  <li className="nav-item">
+                  <Link className="nav-link" to="/admin">
+                  Admin
                   </Link>
                   </li>
                   <li className="nav-item">

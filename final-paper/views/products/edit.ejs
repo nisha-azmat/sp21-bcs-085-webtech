@@ -1,0 +1,35 @@
+<!-- products/edit.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Add your styles or link to external stylesheets here -->
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+
+<h1><%= title %></h1>
+
+<form method="post" action="/products/edit/<%= product._id %>">
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td><input type="text" name="name" value="<%= product.name %>" required></td>
+    </tr>
+    <tr>
+      <td>Description:</td>
+      <td><input type="text" name="description" value="<%= product.description %>" required></td>
+    </tr>
+    <tr>
+      <td>Price:</td>
+      <td><input type="number" name="price" value="<%= product.price %>" required></td>
+    </tr>
+  </table>
+  <button type="submit">Update Product</button>
+</form>
+
+</body>
+</html>

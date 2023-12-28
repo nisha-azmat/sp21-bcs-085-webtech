@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 // Import your components
 import Home from './components/Home';
@@ -7,6 +7,11 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
+import Admin from './components/Admin';
+import Product from './components/Product';
+
+
+
 import { useCookies } from 'react-cookie';
 import { url } from './url';
 import axios from 'axios';
@@ -45,6 +50,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/product" element={<Product />} />
+        
       </Routes>
       <Footer />
     </div>
